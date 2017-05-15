@@ -1,0 +1,37 @@
+Hello. This is a simple race car game developed in my CSC 133 class at California State University, Sacramento. 
+It was a semester long project to teach object oriented programming and design. You are the #1 race car in a race with 3 others.
+The point of the race is to reach all 4 pylons in sequence. You have 3 lives and 50 units of gas. All objects can be collided with.
+Avoid cars and birds as they can damage the car which will affect the speed of your car proportionally to the damage. When damage reaches 10
+the car will explode and the race restarts with 1 less life.
+
+Win Conditions: none
+Loss Conditions: 1)Run out of fuel
+				 2)Car damage reaches 10.
+				 
+Sounds: Set to off by default
+    Background: "Boom Background Music"
+	NPC Collision: "Crunch NPC Collision"
+	Explosion: "Explosion Collision Lost Life"
+	Fuel Can Collision: "Fuel Can Slurp"
+	
+Game Objects:
+	Cars: 1 Player Car (your #1) and 3 NPC cars drawn as red rectangles with black axles and wheels
+	       Note: Collisions with NPC cars will cause 2 points of damage as well as possibly create an oil slick at point of collision
+	Birds: Empty green circles that fly across the map
+		   Note: Will cause 1 point of damage per collision
+	Oil Slicks: Black ovals that will not allow you to steer while you are in one
+	Fuel Cans: Blue squares with their fuel amount on them
+               Note: Will give the player car fuel when collided with
+	Pylons: Yellow circles and are the "checkpoints" of the race
+	
+Game Controls:
+	UP Arrow: Accelerate car
+	DOWN Arrow: Brake car
+	LEFT Arrow: Steer car left
+	RIGHT Arrow: Steer car right
+	o key: (While Paused) Create oil slick at random location
+	q key: Brings up dialog box asking whether or not you want to quit the game
+	SPACE key: Make NPC cars change strategies between chasing you or heading toward one of the pylons (the pylon they go to increments with each change)
+	           Note: The NPC cars change strategies every 10 seconds.
+	DELETE key (not Backspace): (While Paused) Delete seleted object from the game
+	                             Note: Currently only fuel cans and pylons can be deleted as they are the only ones that can be selected.
